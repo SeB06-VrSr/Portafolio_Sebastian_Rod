@@ -1,0 +1,1 @@
+Para tener en cuenta acerca de performance:
