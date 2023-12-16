@@ -1,0 +1,1 @@
+Dentro de esta carpeta se pueden encontrar archivos relacionados con el Scripting de Selenium haciendo uso del lenguaje de programación Python
