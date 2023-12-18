@@ -1,0 +1,42 @@
+config:
+  target: 'https://www.demoblaze.com'
+  phases:
+    - duration: 300
+      arrivalRate: 10
+
+scenarios:
+  - flow:
+      - get:
+          url: '/'
+      - think: 3
+      - get:
+          url: '/login'
+      - think: 2
+      - post:
+          url: '/api/login'
+          json:
+            username: 'BlasterOne'
+            password: '123456'
+      - think: 5
+      - get:
+          url: '/phones'
+      - think: 2
+      - post:
+          url: '/api/cart'
+          json:
+            id: 1
+            quantity: 1
+      - think: 3
+      - get:
+          url: '/cart.html'
+      - think: 5
+      - post:
+          url: '/api/checkout'
+          json:
+            name: 'BlasterOne'
+            card: '1234567890123456'
+            month: '12'
+            year: '2025'
+      - think: 10
+      - get:
+          url: '/logout'
