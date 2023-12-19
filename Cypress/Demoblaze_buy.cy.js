@@ -14,7 +14,6 @@ describe('Login en DemoBlaze', () => {
     cy.wait(2000)
   })
 
-
   it('Realizar compra de producto', () => {
     cy.get(':nth-child(1) > .card > .card-block > .card-title > .hrefch').click()
     cy.wait(2000)
